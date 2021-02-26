@@ -1,0 +1,9 @@
+$background: #fff;
+$textColor: #333;
+
+body {
+  background: $background;
+  color: $textColor;
+  background: url(../img/background.jpg);
+  user-select: none;
+}
