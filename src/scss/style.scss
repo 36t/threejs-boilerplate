@@ -1,9 +1,11 @@
-$background: #fff;
-$textColor: #333;
-
-body {
-  background: $background;
-  color: $textColor;
-  background: url(../img/background.jpg);
-  user-select: none;
+body, html{
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100%;
+}
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
