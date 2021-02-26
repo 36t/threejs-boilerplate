@@ -12,7 +12,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/js/app.js', // エントリポイント①
+    app: './src/ts/App.ts', // エントリポイント①
   },
   output: {
     path: path.resolve(__dirname, 'public'), // 絶対パス必要
@@ -35,13 +35,6 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/, // jqueryとvelocity-animateはnode_modulesの下にあるのでこのように設定
           name: 'vendor' // 分割して出力するファイルの名前
         },
-        // src/modules/greet.jsの出力設定
-        suctomJS: { // プロパティ名は任意で良い
-          test: /[\\/]src[\\/]js[\\/]modules[\\/]/, // [\\\\/] <= 途中のスラッシュを書く場合 (普通に書くと、ウインドウズは動作しない)
-          name: 'script', // 分割して出力するファイルの名前
-          minSize: 0, // 分割の対象となるモジュールの最小サイズ。デフォルトは30kb。今回めっちゃ小さいので
-          minChunks: 2 // モジュールがいくつの場所で利用されていれば分割の対象とするか
-        },
         // src/scss/sytle.scssの出力設定
         stylesheet: { // プロパティ名は任意で良い
           test: /[\\/]src[\\/]scss[\\/]/, // [\\\\/] <= 途中のスラッシュを書く場合 (普通に書くと、ウインドウズは動作しない)
@@ -61,7 +54,7 @@ module.exports = {
     rules: [
       // eslintの設定
       {
-        enforce: 'pre', // preを指定してない場合よりも先に実行する。今回はBabelよりも先
+        // enforce: 'pre', // preを指定してない場合よりも先に実行する。今回はBabelよりも先
         test: /\\.js$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
@@ -69,12 +62,21 @@ module.exports = {
           fix: true, // eslintloaderのオプション。場合によってはコードを調整してくれる
         }
       },
-      // Babelの設定
       {
-        test: /\\.js$/, // loaderの処理対象。今回はjs
-        exclude: /node_modules/, // 除外したいディレクトリ。node_modulesを入れると処理が重くなるので、基本的にはこの設定を行う
-        loader: 'babel-loader' // 利用するloader
-      },
+				test: /\.(glsl|vs|fs)$/,
+				loader: "ts-shader-loader"
+			},
+			{
+				test: /\.tsx?$/,
+				exclude: [/node_modules/, /tsOld/],
+				loader: "ts-loader"
+			},
+      // Babelの設定
+      // {
+      //   test: /\\.js$/, // loaderの処理対象。今回はjs
+      //   exclude: /node_modules/, // 除外したいディレクトリ。node_modulesを入れると処理が重くなるので、基本的にはこの設定を行う
+      //   loader: 'babel-loader' // 利用するloader
+      // },
       // sassについて
       {
         // test: /\\.scss$/, // エラーになる
@@ -89,7 +91,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[contenthash].[ext]',
+              name: '[name].[ext]',
               outputPath: 'img', // 画像の出力先。デフォルトのパスは「path: path.resolve(__dirname, 'public')」
               publicPath: '/img', // 出力する画像からのパス。public/imgにしたい場合は'/img'
             },
@@ -112,6 +114,10 @@ module.exports = {
       }
     ]
   },
+    resolve: {
+        extensions: ['.ts','.tsx','.js'],
+        modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    },
   plugins: [
     // 上記outputで指定したディレクトリ以下をクリーンアップ
     new CleanWebpackPlugin(),
