@@ -4,8 +4,7 @@
   "description": "practice webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development --config webpack.dev.js",
-    "dev": "webpack --config webpack.dev.js --watch",
+    "dev": "webpack serve --mode development --config webpack.dev.js",
     "build": "yarn eslint && webpack --config webpack.prod.js",
     "eslint": "eslint src/js --ext .js",
     "eslint:fix": "eslint src/js --ext .js --fix"
