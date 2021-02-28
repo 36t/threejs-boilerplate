@@ -4,7 +4,7 @@
 		"target": "es5",
 		"sourceMap": true,
 
-		"lib": ["es2015", "dom"],
+		"lib": ["es2020", "dom"],
 		"baseUrl": "./",
 
 		// Shortcuts to avoid up-one-level hell: 
