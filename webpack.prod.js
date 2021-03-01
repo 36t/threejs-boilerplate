@@ -1,4 +1,3 @@
-// 本番用webpack設定ファイル
 const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -8,10 +7,10 @@ module.exports = merge(commonConfig, {
     optimization: {
         minimizer: [
             new TerserPlugin({
-                extractComments: false, // ライブラリのライセンスコメントの抽出を防ぐ
+                extractComments: false,
                 terserOptions: {
                     compress: {
-                        drop_console: true // console.logの削除
+                        drop_console: true
                     }
                 }
             })
