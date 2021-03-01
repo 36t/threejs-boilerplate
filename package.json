@@ -1,8 +1,7 @@
 {
-  "name": "webpack-practice",
+  "name": "threejs-boilerplate",
   "version": "1.0.0",
-  "description": "practice webpack",
-  "main": "index.js",
+  "description": "boilerplate of three.js (use TypeScript)",
   "scripts": {
     "start": "webpack serve --mode development --config webpack.dev.js  --progress",
     "dev": "webpack --config webpack.dev.js --watch",
@@ -12,19 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/36t/webpack-practice"
+    "url": "git+https://github.com/36t/threejs-boilerplate"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/36t/webpack-practice/issues"
-  },
-  "homepage": "https://github.com/36t/webpack-practice#readme",
+  "homepage": "https://github.com/36t/threejs-boilerplate#readme",
   "dependencies": {
-    "jquery": "^3.5.1",
-    "three": "^0.126.0",
-    "velocity-animate": "^1.5.2"
+    "three": "^0.126.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",
