@@ -8,6 +8,7 @@
 import * as THREE from 'three'
 
 import Shape from './Shape'
+import file from '../../img/background.jpg'
 
 export default class View {
   private renderer: THREE.WebGLRenderer
@@ -23,7 +24,7 @@ export default class View {
     this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     this.camera.position.z = 15
     this.scene = new THREE.Scene()
-    this.scene.background = new THREE.TextureLoader().load('img/background2.jpg')
+    this.scene.background = new THREE.TextureLoader().load(file)
     this.torus = new Shape(this.scene)
 
     // Set initial sizes
