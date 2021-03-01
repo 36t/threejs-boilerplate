@@ -4,7 +4,7 @@
 
 ```
 # development (include start server)
-yarn dev
+yarn start
 
 # build (publish files to public directory)
 yarn build
@@ -17,6 +17,10 @@ yarn add -D <package>
 yarn remove <package>
 
 # eslint
-yarn eslint
-yarn eslint:fix
+yarn lint
+yarn lint:fix
 ```
+
+## 参考
+
+- [脱TSLintして、ESLint TypeScript Plugin に移行する \- Qiita](https://qiita.com/suzuki_sh/items/fe9b60c4f9e1dbc5d903)
