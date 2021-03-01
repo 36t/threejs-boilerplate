@@ -17,13 +17,13 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      chunks: 'initial', 
+      chunks: 'initial',
       cacheGroups: {
         vendorJS: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor'
         },
-        stylesheet: { 
+        stylesheet: {
           test: /[\\/]src[\\/]scss[\\/]/,
           name: 'style',
           minSize: 0,
@@ -31,7 +31,6 @@ module.exports = {
         }
       }
     },
-    // cssの最適化
     minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
@@ -39,26 +38,17 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   // enforce: 'pre', // preを指定してない場合よりも先に実行する。今回はBabelよりも先
-			// 	test: /\.tsx?$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader',
-      //   options: {
-      //     fix: true, // eslintloaderのオプション。場合によってはコードを調整してくれる
-      //   }
-      // },
       {
         enforce: 'pre',
-				test: /\.(glsl|vs|fs)$/,
-				loader: "ts-shader-loader"
-			},
-			{
+        test: /\.(glsl|vs|fs)$/,
+        loader: "ts-shader-loader"
+      },
+      {
         enforce: 'pre',
-				test: /\.tsx?$/,
-				exclude: [/node_modules/, /tsOld/],
-				loader: "ts-loader"
-			},
+        test: /\.tsx?$/,
+        exclude: [/node_modules/, /tsOld/],
+        loader: "ts-loader"
+      },
       {
         test: /\\.js$/,
         exclude: /node_modules/,
@@ -75,7 +65,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'img', 
+              outputPath: 'img',
               publicPath: '/img',
             },
           },
@@ -95,11 +85,11 @@ module.exports = {
       }
     ]
   },
-    resolve: {
-        extensions: ['.ts','.tsx','.js'],
-        modules: [path.resolve(__dirname, 'src'), 'node_modules']
-    },
-    target: ["web", "es5"],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+  },
+  target: ["web", "es5"],
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
