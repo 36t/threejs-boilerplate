@@ -1,9 +1,3 @@
-/*
- * App.ts
- * ===========
- * Entry from Webpack, generates Three.js View
- */
-
 import View from './webgl/View'
 import '../scss/style.scss'
 
@@ -11,7 +5,7 @@ class App {
   private view: View
 
   constructor() {
-    const canvasBox = <HTMLCanvasElement>document.getElementById('webgl-canvas')
+    const canvasBox = <HTMLCanvasElement>document.getElementById('webgl')
     this.view = new View(canvasBox)
 
     window.addEventListener('resize', this.resize)
