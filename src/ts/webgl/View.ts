@@ -1,14 +1,7 @@
-/*
- * View.ts
- * ===========
- * Topmost Three.js class.
- * Controls scene, cam, renderer, and objects in scene.
- */
-
 import * as THREE from 'three'
 
 import Shape from './Shape'
-import background from '../../img/background２.png'
+import background from '../../img/background.png';
 
 export default class View {
   private renderer: THREE.WebGLRenderer
@@ -21,6 +14,7 @@ export default class View {
       canvas: canvasElem,
       antialias: true,
     })
+
     this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     this.camera.position.z = 15
     this.scene = new THREE.Scene()

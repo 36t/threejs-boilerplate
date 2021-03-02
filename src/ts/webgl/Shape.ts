@@ -1,10 +1,3 @@
-/*
- * Shape.ts
- * ===========
- * Placeholder shape to demonstrate setup works.
- * Has capacity to import custom .glsl shader files
- */
-
 import * as THREE from 'three'
 
 import vertShader from './glsl/torus.vs'
