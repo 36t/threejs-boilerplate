@@ -8,7 +8,7 @@
 import * as THREE from 'three'
 
 import Shape from './Shape'
-import background from '../../img/background.png'
+import background from '../../img/background２.png'
 
 export default class View {
   private renderer: THREE.WebGLRenderer
@@ -27,7 +27,7 @@ export default class View {
     this.scene.background = new THREE.TextureLoader().load(background)
     this.torus = new Shape(this.scene)
 
-    // Set initial sizes
+
     this.onWindowResize(window.innerWidth, window.innerHeight)
   }
 
