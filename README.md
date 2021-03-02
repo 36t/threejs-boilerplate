@@ -28,4 +28,6 @@ yarn lint:fix
 
 ## bug
 
-- not live leload
+- 保存時にリロードしない
+- 保存時に自動的に整形しない
+- コミット時にlinterが走らない
