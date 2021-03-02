@@ -1,6 +1,6 @@
 module.exports = {
-    root: true, 
-    env: { 
+    root: true,
+    env: {
         browser: true,
         es2020: true,
     },
@@ -15,9 +15,9 @@ module.exports = {
         "plugin:prettier/recommended",
         "prettier"
     ],
-   plugins: [
-    "@typescript-eslint"
-  ],
+    plugins: [
+        "@typescript-eslint"
+    ],
     rules: {
         'prefer-const': 'error',
     }
