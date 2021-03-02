@@ -21,6 +21,11 @@ yarn lint
 yarn lint:fix
 ```
 
-## 参考
+## reference
 
 - [脱TSLintして、ESLint TypeScript Plugin に移行する \- Qiita](https://qiita.com/suzuki_sh/items/fe9b60c4f9e1dbc5d903)
+- [marquizzo/three\.ts\-template: ThreeJS, TypeScript, GLSL, & Webpack boilerplate for quick prototyping\.](https://github.com/marquizzo/three.ts-template)
+
+## bug
+
+- not live leload
