@@ -9,6 +9,7 @@ module.exports = merge(commonConfig, {
   devServer: {
     open: true,
     port: 9000,
+    hot: true,
     watchContentBase: true,
     contentBase: path.resolve(__dirname, 'public'),
   }
