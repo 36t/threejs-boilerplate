@@ -7,7 +7,7 @@ export default class View {
   private renderer: THREE.WebGLRenderer
   private scene: THREE.Scene
   private camera: THREE.PerspectiveCamera
-  private torus: Shape
+  private ring: Shape
 
   constructor(canvasElem: HTMLCanvasElement) {
     this.renderer = new THREE.WebGLRenderer({
@@ -18,8 +18,8 @@ export default class View {
     this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     this.camera.position.z = 15
     this.scene = new THREE.Scene()
-  this.scene.background = new THREE.TextureLoader().load(backgroundImage)
-    this.torus = new Shape(this.scene)
+    this.scene.background = new THREE.TextureLoader().load(backgroundImage)
+    this.ring = new Shape(this.scene)
 
     this.onWindowResize(window.innerWidth, window.innerHeight)
   }
@@ -31,7 +31,7 @@ export default class View {
   }
 
   public update(secs: number): void {
-    this.torus.update(secs)
+    this.ring.update(secs)
     this.renderer.render(this.scene, this.camera)
   }
 }

@@ -8,16 +8,16 @@ export default class Shape {
   timeU: THREE.IUniform
 
   constructor(parentScene: THREE.Scene) {
-    const geom = new THREE.TorusBufferGeometry(5, 1, 22, 22)
-    const mat = new THREE.RawShaderMaterial({
+    const geometry = new THREE.TorusBufferGeometry(5, 1, 22, 22)
+    const material = new THREE.RawShaderMaterial({
       uniforms: {
         time: { value: 0 },
       },
       vertexShader: vertShader,
       fragmentShader: fragShader,
     })
-    this.timeU = mat.uniforms.time
-    this.mesh = new THREE.Mesh(geom, mat)
+    this.timeU = material.uniforms.time
+    this.mesh = new THREE.Mesh(geometry, material)
     parentScene.add(this.mesh)
   }
 
