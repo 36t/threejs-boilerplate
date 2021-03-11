@@ -1,5 +1,12 @@
 # threejs-boilerplate
 
+![screenshot](screen.gif)
+
+## original code
+
+- [36t/threejs\-journey at 07\-cameras\-final](https://github.com/36t/threejs-journey/tree/07-cameras-final)
+
+
 ## command
 
 ```
