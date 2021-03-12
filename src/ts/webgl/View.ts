@@ -18,7 +18,7 @@ export default class View {
     this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     this.camera.position.z = 15
     this.scene = new THREE.Scene()
-    this.scene.background = new THREE.TextureLoader().load(backgroundImage)
+    // this.scene.background = new THREE.TextureLoader().load(backgroundImage)
     this.ring = new Shape(this.scene)
 
     this.onWindowResize(window.innerWidth, window.innerHeight)
