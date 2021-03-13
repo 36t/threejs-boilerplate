@@ -6,7 +6,6 @@
 
 - [36t/threejs\-journey at 07\-cameras\-final](https://github.com/36t/threejs-journey/tree/07-cameras-final)
 
-
 ## command
 
 ```
@@ -28,12 +27,9 @@ yarn lint
 yarn lint:fix
 ```
 
-## reference
+## 参考
 
-- [脱TSLintして、ESLint TypeScript Plugin に移行する \- Qiita](https://qiita.com/suzuki_sh/items/fe9b60c4f9e1dbc5d903)
+- [脱 TSLint して、ESLint TypeScript Plugin に移行する \- Qiita](https://qiita.com/suzuki_sh/items/fe9b60c4f9e1dbc5d903)
 - [marquizzo/three\.ts\-template: ThreeJS, TypeScript, GLSL, & Webpack boilerplate for quick prototyping\.](https://github.com/marquizzo/three.ts-template)
-
-## bug
-
-- 保存時に自動的に整形しない
-- コミット時にlinterが走らない
+- [webpack Tutorial: How to Set Up webpack 5 From Scratch \| Tania Rascia](https://www.taniarascia.com/how-to-use-webpack/)
+- [\[webpack\]ts\-loader で JavaScript をトランスコンパイルする\(babel\-loader 不要\) \- Qiita](https://qiita.com/SoraKumo/items/5d92b15d06778458f5e1)
