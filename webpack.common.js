@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 
 module.exports = {
+  target: 'web', // リロードで必須
   entry: {
     app: './src/ts/App.ts',
   },
@@ -39,21 +40,21 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
+        // enforce: 'pre',
         test: /\.(glsl|vs|fs)$/,
         loader: "ts-shader-loader"
       },
       {
-        enforce: 'pre',
+        // enforce: 'pre',
         test: /\.tsx?$/,
-        exclude: [/node_modules/, /tsOld/],
+        exclude: [/node_modules/],
         loader: "ts-loader"
       },
-      {
-        test: /\\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
+      // {
+      //   test: /\\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: 'babel-loader'
+      // },
       {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
@@ -89,7 +90,6 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
-  target: ["web", "es5"],
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
