@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 
 import Shape from './Shape'
-import backgroundImage from '../../img/background.png'
+// import backgroundImage from '../../img/background.png'
 
 export default class View {
   private renderer: THREE.WebGLRenderer
@@ -18,7 +18,8 @@ export default class View {
     this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     this.camera.position.z = 15
     this.scene = new THREE.Scene()
-    this.scene.background = new THREE.TextureLoader().load(backgroundImage)
+    this.scene.background = new THREE.Color('white')
+    // this.scene.background = new THREE.TextureLoader().load(backgroundImage)
     this.ring = new Shape(this.scene)
 
     this.onWindowResize(window.innerWidth, window.innerHeight)
