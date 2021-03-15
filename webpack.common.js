@@ -7,11 +7,10 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   target: 'web', // <- important
-  entry: {
-    app: './src/ts/App.ts',
-  },
+  entry: './src/ts/App.ts',
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '',
     filename: (pathData) => {
       return pathData.chunk.name.search(/vendor/) > -1 ? 'js/[name].js' : 'js/[name].[contenthash].js';
     },
@@ -87,7 +86,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/html/index.html',
-      chunks: ['app']
+      // title: 'Hello world',
     }),
     new MiniCssExtractPlugin({
       filename: './css/[name].[contenthash].css'
