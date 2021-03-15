@@ -12,7 +12,7 @@ module.exports = merge(commonConfig, {
     compress: true,
     hot: true,
     port: 9000,
-    contentBase: path.resolve(__dirname, 'src'), // <- important
+    contentBase: path.resolve(__dirname, './dist'), // <- important
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
