@@ -5,6 +5,9 @@
 ## command
 
 ```
+# setup
+yarn install
+
 # development (include start server)
 yarn start
 
