@@ -1,13 +1,13 @@
 import * as THREE from 'three'
 
-import Shape from './Shape'
+import TorusObject from './TorusObject'
 import backgroundImage from '../../img/background.png'
 
 export default class View {
   private renderer: THREE.WebGLRenderer
   private scene: THREE.Scene
   private camera: THREE.PerspectiveCamera
-  private ring: Shape
+  private torus: TorusObject
 
   constructor(canvasElem: HTMLCanvasElement) {
     this.renderer = new THREE.WebGLRenderer({
@@ -15,12 +15,17 @@ export default class View {
       antialias: true,
     })
 
+    // Camera
     this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     this.camera.position.z = 15
+
+    // Scene
     this.scene = new THREE.Scene()
     // this.scene.background = new THREE.Color('white')
     this.scene.background = new THREE.TextureLoader().load(backgroundImage)
-    this.ring = new Shape(this.scene)
+
+    // Object
+    this.torus = new TorusObject(this.scene)
 
     this.onWindowResize(window.innerWidth, window.innerHeight)
   }
@@ -32,7 +37,7 @@ export default class View {
   }
 
   public update(secs: number): void {
-    this.ring.update(secs)
+    this.torus.update(secs)
     this.renderer.render(this.scene, this.camera)
   }
 }
