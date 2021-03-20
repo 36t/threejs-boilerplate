@@ -11,8 +11,7 @@ module.exports = merge(commonConfig, {
     open: true,
     compress: true,
     hot: true,
-    port: 9000,
-    contentBase: path.resolve(__dirname, './dist'), // <- important
+    contentBase: path.resolve(__dirname, './dist'),
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
