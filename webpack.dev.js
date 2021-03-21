@@ -1,8 +1,7 @@
-// 開発用webpack設定ファイル
-const { merge } = require('webpack-merge');
-const commonConfig = require('./webpack.common.js');
-const path = require('path');
-const webpack = require('webpack');
+const { merge } = require('webpack-merge')
+const commonConfig = require('./webpack.common.js')
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = merge(commonConfig, {
   mode: 'development',
