@@ -1,24 +1,24 @@
-module.exports = {
-    root: true,
-    env: {
-        browser: true,
-        es2020: true,
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2020": true
     },
-    parserOptions: {
-        sourceType: 'module',
-        project: "./tsconfig.json",
+    "parserOptions": {
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
-    extends: [
+    "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended",
         "prettier"
     ],
-    plugins: [
+    "plugins": [
         "@typescript-eslint"
     ],
-    rules: {
-        'prefer-const': 'error',
+    "rules": {
+        "prefer-const": "error"
     }
 }
