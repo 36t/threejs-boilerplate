@@ -3,9 +3,12 @@
 		"module": "commonjs",
 		"target": "es5",
 		"sourceMap": true,
-		"lib": ["es2020", "dom"],
+		"lib": [
+			"es2020",
+			"dom"
+		],
 		"baseUrl": "./",
-		"noImplicitAny": true, 
+		"noImplicitAny": true,
 		"suppressImplicitAnyIndexErrors": true
 	},
 	"exclude": [
