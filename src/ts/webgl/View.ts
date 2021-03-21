@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-import TorusObject from './TorusObject'
+import TorusObject from './object/Torus'
 import backgroundImage from '../../img/background.png'
 
 export default class View {

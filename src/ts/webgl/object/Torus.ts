@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 
-import vertShader from './glsl/torus.vs'
-import fragShader from './glsl/torus.fs'
+import vertShader from '../glsl/torus.vs'
+import fragShader from '../glsl/torus.fs'
 
 export default class Shape {
   mesh: THREE.Mesh
