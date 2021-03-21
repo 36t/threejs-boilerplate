@@ -1,1 +1,2 @@
-*.js
+webpack.*.js
+postcss.config.js
