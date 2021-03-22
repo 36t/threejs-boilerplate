@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import vertShader from '../glsl/torus.vs'
 import fragShader from '../glsl/torus.fs'
 
-export default class Shape {
+export default class Torus {
   mesh: THREE.Mesh
   timeU: THREE.IUniform
 

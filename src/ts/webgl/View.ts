@@ -1,13 +1,13 @@
 import * as THREE from 'three'
 
-import TorusObject from './object/Torus'
+import Torus from './object/Torus'
 import backgroundImage from '../../img/background.png'
 
 export default class View {
   private renderer: THREE.WebGLRenderer
   private scene: THREE.Scene
   private camera: THREE.PerspectiveCamera
-  private torus: TorusObject
+  private torus: Torus
 
   constructor(canvasElem: HTMLCanvasElement) {
     this.renderer = new THREE.WebGLRenderer({
@@ -25,7 +25,7 @@ export default class View {
     this.scene.background = new THREE.TextureLoader().load(backgroundImage)
 
     // Object
-    this.torus = new TorusObject(this.scene)
+    this.torus = new Torus(this.scene)
 
     this.onWindowResize(window.innerWidth, window.innerHeight)
   }
