@@ -15,14 +15,14 @@ export default class View {
       antialias: true,
     })
 
-    // Camera
-    this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
-    this.camera.position.z = 15
-
     // Scene
     this.scene = new THREE.Scene()
     // this.scene.background = new THREE.Color('white')
     this.scene.background = new THREE.TextureLoader().load(backgroundImage)
+
+    // Camera
+    this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
+    this.camera.position.z = 15
 
     // Object
     this.torus = new Torus(this.scene)
