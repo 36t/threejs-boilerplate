@@ -158,10 +158,10 @@
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.6.tgz#a9ca4b70a18b270ccb2bc0aaafefd1d486b7ea74"
   integrity sha512-W+bw9ds02rAQaMvaLYxAbJ6cvguW/iJXNT6lTssS1ps6QdrMKttqEAMEG/b5CR8TZl3/L7/lH0ZV5nNR1LXikA==
 
-"@types/three@0.126.0":
-  version "0.126.0"
-  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.126.0.tgz#58f80e13ab5f8084741e8a9d7e804b9a31039043"
-  integrity sha512-C7cFOWQpcGQAJ0PJSdU6ncZFn51fWKaV8o1Dz2fvikFRGWY8cI5/M/q5JHX7/TzCfMRadLP690Ksh8QvanSW8Q==
+"@types/three@0.126.1":
+  version "0.126.1"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.126.1.tgz#f53450d4218a7c8bfb17af062f9d8473c8e241e0"
+  integrity sha512-GR7e3d9CYYmwIR3HDiRZDFpoHIp2Vg5IbULcIjL296C8VbjruGwJ7Br1GTBkslEVfkezKrtJTf7KuqoIt3oYTg==
 
 "@types/uglify-js@*":
   version "3.12.0"
@@ -1483,10 +1483,10 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
-css-loader@5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-5.1.2.tgz#b93dba498ec948b543b49d4fab5017205d4f5c3e"
-  integrity sha512-T7vTXHSx0KrVEg/xjcl7G01RcVXpcw4OELwDPvkr7izQNny85A84dK3dqrczuEfBcu7Yg7mdTjJLSTibRUoRZg==
+css-loader@5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-5.1.4.tgz#1f6d278f041d512ad410df7168f0bdae97f55950"
+  integrity sha512-3Fz3B+7nIw6N/rw/sEBxiZsOnYedKvT3w7gicEjAVc73k7gfYN0v2iyBxq4brQvv/Dt6haze4m0BbPd71/OAFw==
   dependencies:
     camelcase "^6.2.0"
     cssesc "^3.0.0"
@@ -7387,10 +7387,10 @@ webpack-sources@^2.1.1:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
 
-webpack@5.27.0:
-  version "5.27.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.27.0.tgz#387458f83142253f2759e22415dc1359746e6940"
-  integrity sha512-So7grHu//UyJ+80VrNHjWwW6WSZkfWWD6a7NV/88r8G92PO6TYOGzbtTiZBwbPVkx6LVP8OYvHD+IxuJ2KBz4g==
+webpack@5.27.2:
+  version "5.27.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.27.2.tgz#44442219e1469ebe00292703b848580faae03f07"
+  integrity sha512-brNF3N/EdvMzkaZ/Xzb8sqPn5Si3iw6meqCnmNFtcnkorZsFZCBFMa2ElpIMjx6sKWYsnUpBO2dnX+7xgj+mjg==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.46"
