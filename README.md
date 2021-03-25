@@ -1,4 +1,4 @@
-# threejs-study-boilerplate
+# threejs-boilerplate
 
 ![screenshot](screen.gif)
 
