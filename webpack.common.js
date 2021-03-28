@@ -82,8 +82,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/html/index.html',
-      // title: 'Hello world',
+      template: './src/html/index.ejs',
+      title: 'Three.js boilerplate',
     }),
     new MiniCssExtractPlugin({
       filename: './css/[name].[contenthash].css',
