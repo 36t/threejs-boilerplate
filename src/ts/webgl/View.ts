@@ -1,13 +1,17 @@
 import * as THREE from 'three'
 
-import Torus from './object/Torus'
+import TextureLoader from './loader/TextureLoader'
 import backgroundImage from '../../img/background.png'
+
+import Torus from './object/Torus'
+import OrbitControl from './control/OrbitControl'
 
 export default class View {
   private renderer: THREE.WebGLRenderer
   private scene: THREE.Scene
   private camera: THREE.PerspectiveCamera
   private torus: Torus
+  private orbitControl: OrbitControl
 
   constructor(canvasElem: HTMLCanvasElement) {
     this.renderer = new THREE.WebGLRenderer({
@@ -18,7 +22,7 @@ export default class View {
     // Scene
     this.scene = new THREE.Scene()
     // this.scene.background = new THREE.Color('white')
-    this.scene.background = new THREE.TextureLoader().load(backgroundImage)
+    this.scene.background = new TextureLoader(backgroundImage).load()
 
     // Camera
     this.camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
@@ -26,6 +30,9 @@ export default class View {
 
     // Object
     this.torus = new Torus(this.scene)
+
+    // Control
+    this.orbitControl = new OrbitControl(this.camera, canvasElem)
 
     this.onWindowResize(window.innerWidth, window.innerHeight)
   }
@@ -38,6 +45,7 @@ export default class View {
 
   public update(secs: number): void {
     this.torus.update(secs)
+    this.orbitControl.update()
     this.renderer.render(this.scene, this.camera)
   }
 }
