@@ -21,7 +21,7 @@ export default class View {
 
     // Scene
     this.scene = new THREE.Scene()
-    // this.scene.background = new THREE.Color('white')
+    // this.scene.background = new THREE.Color('black')
     this.scene.background = new TextureLoader(backgroundImage).load()
 
     // Camera
