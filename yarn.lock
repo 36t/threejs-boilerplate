@@ -168,10 +168,10 @@
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.7.tgz#545158342f949e8fd3bfd813224971ecddc3fac4"
   integrity sha512-0VBprVqfgFD7Ehb2vd8Lh9TG3jP98gvr8rgehQqzztZNI7o8zS8Ad4jyZneKELphpuE212D8J70LnSNQSyO6bQ==
 
-"@types/three@0.126.2":
-  version "0.126.2"
-  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.126.2.tgz#68838cc92cc89c156c05be63e54efc91f58a5417"
-  integrity sha512-6JqTgijtfXcTJik8NtiNxr2L90ex6ElM00qilOGeUcrEsJLOdzLJSIkXHUYS+KPAYQYtRJQKD6XaXds3HjS+gg==
+"@types/three@0.127.0":
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.127.0.tgz#6d2bf6d7c14d4c4dc399a0e355085f27e996ac89"
+  integrity sha512-4Q33L6PzzxCXm0VdUv4x1/4VBnwWgCS7Ui6WpRh88GVIUUYsg5qU2GVzva14hDJbtfyNBxey7UcdInR4RkKPeQ==
 
 "@types/uglify-js@*":
   version "3.13.0"
