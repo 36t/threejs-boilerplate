@@ -38,7 +38,7 @@
     "husky": "7.0.1",
     "image-webpack-loader": "7.0.1",
     "lint-staged": "11.0.0",
-    "mini-css-extract-plugin": "1.6.0",
+    "mini-css-extract-plugin": "1.6.2",
     "node-sass": "6.0.1",
     "postcss": "8.2.14",
     "postcss-loader": "6.1.1",
