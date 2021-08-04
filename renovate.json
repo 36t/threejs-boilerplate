@@ -5,7 +5,7 @@
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
   "labels": ["renovate"],
-  "patch": { "automerge": false},
+  "patch": { "automerge": },
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": [
